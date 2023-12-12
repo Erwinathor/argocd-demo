@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-memcached
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Erwinathor/argocd-demo.git
+    targetRevision: HEAD
+    path: memcached
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: memcached
