@@ -5,13 +5,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/Erwinathor/argocd-demo'
+    repoURL: https://github.com/Erwinathor/argocd-demo.git
     targetRevision: HEAD
     path: nginx
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: default
-syncPolicy:
-  automated:
-    prune: false
-    selfHeal: false
