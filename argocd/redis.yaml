@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-redis
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Erwinathor/argocd-demo.git
+    targetRevision: HEAD
+    path: redis
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: redis
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
