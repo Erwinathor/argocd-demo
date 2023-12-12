@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: 'https://github.com/Erwinathor/argocd-demo'
     targetRevision: HEAD
-    path: ../applications/nginx
+    path: /nginx
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
