@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: nginx
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   replicas: 1
   selector:

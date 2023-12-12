@@ -3,8 +3,6 @@ kind: Service
 metadata:
   name: nginx-service
   namespace: nginx
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   selector:
     app: nginx
